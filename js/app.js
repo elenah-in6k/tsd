@@ -6,6 +6,6 @@ angular.module('tsd', [])
                 btnicon: '=',
                 btnname: '='
             },
-    template: '<span class="{{btnIcon}} "></span>   <span class="request-button-name">{{btnname}</span>'
+    template: '<span class="{{btnIcon}} "></span>   <span class="request-button-name">{{btnname}}</span>'
   };
 });
