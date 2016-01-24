@@ -1,7 +1,10 @@
 angular.module('tsd', [])
-.directive('requestButton', function() {
-	restrict: 'E';
+.directive('requestButton', function($scope) {
+	$scope.btnIcon = "=";
+	$scope.btname = "=";
+	
   return {
-    template: '<span class="request-button-icon "></span>   <span class="request-button-name">Запрос на замену/ремонт оборудования</span>'
+  	restrict: 'E',
+    template: '<span class="{{btnIcon}} "></span>   <span class="request-button-name">{{btnname}</span>'
   };
 });
