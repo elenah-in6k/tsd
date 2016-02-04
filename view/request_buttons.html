@@ -1,0 +1,10 @@
+<div class="request-buttons">
+    <div class="button-row" ng-repeat="option in options">
+        <input id="{{option.name}}" type="radio" value="{{option.name}}" name="request_buttons"/>
+        <label for="{{option.name}}" ng-click="select(option)">
+            <span class="fa" ng-class="option.class"></span>
+            <span>{{option.name}}</span>
+        </label>
+    </div>
+
+</div>

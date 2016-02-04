@@ -1,26 +1,28 @@
 <!DOCTYPE HTML>
-<HTML ng-app="tsd">
-<HEAD>
-<meta charset="utf-8">
-<TITLE>TSD</TITLE>
-<link href="css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="css/style.css">
+<html ng-app="tsd">
+    <head>
+        <meta charset="utf-8">
+        <title>TSD</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==" crossorigin="anonymous">
+    </head>
+    <body>
+        <div id="tsd-page" ng-controller="TsdController">
+            <div class="request-bar">
+                <h3> Выберите необходимую форму: </h3>
+                <request-buttons options="buttons" selected="selectedButton"></request-buttons>
+            </div>
+            <div class="request-form-block" ng-if="selectedButton">
+               <request-form selected-button="selectedButton" save="save" form="forms[selectedButton.type]">ffff</request-form>
+            </div>
+        </div>
 
-</HEAD>
-<BODY ng-view >
-<div class ="request-bar" >
-<h3> Выберите необходимую форму: </h3>
-<request-button name={{equipment.title}} icon ="'icon'" ></request-button>
-<request-button name="{{access.title}}" icon ="'icon'"></request-button>
-<request-button name="{{bugReport.title}}" icon ="'icon'"></request-button>
-</div>
-<div class="request-form">
- <request-form-frame name1="'Запрос на замену ремонт оборудования'" ></request-form-frame>
-</div>
- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-
-<script src="js/request-form-frame.js"></script>
-<script src="js/app.js"></script>
-</BODY>
-</HTML>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/controllers/tsd.js"></script>
+        <script src="js/directives/request_buttons.js"></script>
+        <script src="js/directives/request_form.js"></script>
+    </body>
+</html>
 

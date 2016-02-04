@@ -1,57 +1,40 @@
-.request-bar{
+@import url(bootstrap/css/bootstrap.css);
+
+.request-bar {
 	display: block;
     max-width: 320px;
     margin: 20px;
     width: 30%;
     float: left;
 }
-
-.request-button:active {
-	color: #31708f !important;
-    background-color: #a4cee1 !important;
-    border-color: #22a1c6 !important;
+/* request buttons */
+.request-buttons {
+    background: whitesmoke;
 }
-.request-button-icon {
-  width: 10%;
-  float: left;
-  margin-top: 4px;
+.request-buttons .button-row input[type='radio'] {
+    display: none;
 }
-.request-button {
-  background-color: #d9edf7;
-  border-color: #bce8f1;
-  color: #31708f;
-  margin-top: 5px;
-  width: 320px;
-}
-.request-button-name {
-  width: 90%;
-  float: left;
-  text-align: left;
-}
-
-.request-button {
+.request-buttons .button-row  label {
     background-color: #d9edf7;
     border-color: #bce8f1;
     color: #31708f;
     margin-top: 5px;
-    width: 320px;
+    width: 100%;
+}
+.request-buttons .button-row input:checked + label {
+    color: red;
 }
 
-.form-head {
+
+/* request form */
+.request-form-block {
+    float: left;
+}
+#request-form .form-title {
     background-color: #d9edf7;
-    border-color: #bce8f1 ;
     color: #31708f;
     font-size: 16px;
     font-weight: bold;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
     padding: 10px 15px;
-    border: 1px solid transparent;
-}
-
-.request-form {
-    width: 60%;
-    display: inline-block;
-    margin-left: 20px;
-    margin-top: 30px;
+    border: 1px solid #bce8f1;
 }
