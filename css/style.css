@@ -1,40 +1,123 @@
 @import url(bootstrap/css/bootstrap.css);
-
+h3{
+    font-size: 22px;
+    font-weight: bold;
+    color: #31708f;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+.container{
+    margin: 20px;
+    width: 100%;
+}
 .request-bar {
 	display: block;
-    max-width: 320px;
+    max-width: 350px;
     margin: 20px;
     width: 30%;
     float: left;
 }
 /* request buttons */
-.request-buttons {
-    background: whitesmoke;
+.request-button {
+    width: 90%;
+    float: left;
 }
-.request-buttons .button-row input[type='radio'] {
-    display: none;
-}
-.request-buttons .button-row  label {
+
+.request-buttons .button-row {
     background-color: #d9edf7;
     border-color: #bce8f1;
     color: #31708f;
     margin-top: 5px;
     width: 100%;
-}
-.request-buttons .button-row input:checked + label {
-    color: red;
+    text-align: left;
 }
 
+.request-buttons .button-row:active{
+     color: #31708f;
+     background-color: #a4cee1;
+
+}
+.request-buttons .button-row:focus{
+    color: #31708f !important;
+    background-color: #a4cee1 !important;
+    border-color: #22a1c6 !important;
+}
+.request-buttons .button-row:hover {
+    background-color: #cde1eb;
+}
+.request-buttons .button-row label {
+    width: 90%;
+    float: left;
+    text-align: left;
+    margin-bottom: -5px;
+}
 
 /* request form */
 .request-form-block {
-    float: left;
+    width: 70%;
+    display: inline-block;
+    align-content: center;
 }
+
+#request-form {
+    float: left;
+    margin-left: 20px;
+    margin-top: 30px;
+    border-color: #bce8f1 ;
+    width: 70%;
+
+}
+
+#request-form .form-content div > div {
+    margin: 15px 0 5px 0;
+}
+
 #request-form .form-title {
     background-color: #d9edf7;
     color: #31708f;
     font-size: 16px;
     font-weight: bold;
-    padding: 10px 15px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     border: 1px solid #bce8f1;
+    padding: 10px 15px;
+}
+
+#request-form .form-content{
+    padding:0 35px 15px;
+    font-size: 14px;
+    border: 1px solid #bce8f1;
+}
+
+input, select {
+    background: white none;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    font-size: 14px;
+    height: 32px;
+    width: 266px;
+    line-height: 1.429;
+    padding: 6px 12px;
+}
+
+.disabled-input {
+    cursor: not-allowed;
+    background-color: #ececec;
+}
+
+input[type='checkbox'] {
+    height: 15px;
+    width: 15px;
+    margin: 0px 0px -5px 0px;
+}
+
+textarea {
+    display: block;
+    font-size: 14px;
+    height: 85px;
+    max-width: 500px;
+    padding: 3px 10px;
+    width: 500px;
+    margin-bottom: 20px;
 }

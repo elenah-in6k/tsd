@@ -1,3 +1,17 @@
-<label for="">Адрес ресурса:</label>
-<input ng-model="form.address" type="text"/>
-<button ng-click="save(form)">Отправить</button>
+<div >Адрес ресурса:</div>
+<input ng-model="form.address" type="text" placeholder="E.g: https://jira.atlassian.com/"/>
+
+<div >Имя проекта:</div>
+<input ng-model="form.projectName" type="text" placeholder="Введите имя проекта"/>
+
+<div>Есть ли у вас аккаунт для данного ресурса?
+    <input  type="checkbox" ng-model="form.has_account" class="ng-pristine ng-untouched ng-valid"></div>
+
+
+<div class="request-label" >Логин пользователя:</div>
+<input class=" ng-valid disabled-input" ng-class="!form.has_account ? 'disabled-input' : '' " ng-disabled="!form.has_account"  ng-model="form.login" disabled="disabled">
+
+<div for="info">Дополнительная информация:</div>
+<textarea id="info" ng-model="form.description"></textarea>
+
+<button class="btn btn-primary" ng-click="save(form)">Отправить</button>

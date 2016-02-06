@@ -1,6 +1,23 @@
-<label for="">Оборудование которое вы хотите:</label>
-<input ng-model="form.name" type="text"/>
+<div>Оборудование которое вы хотите:</div>
+<input ng-model="form.name" type="text" placeholder="E.g.: RAM 4gb, HDD 500gb"/>
 
-<label for="">Дополнительная информация:</label>
-<textarea ng-model="form.description"></textarea>
-<button ng-click="save(form)">Отправить</button>
+<div >Причина замены:</div>
+<select ng-model="form.reason">
+    <option value="" class=""  selected="selected" >Not selected</option>
+    <option value="Breakdown" >Breakdown</option>
+    <option value="Upgrade">Upgrade</option>
+    <option value="Individual preference">Individual preference</option>
+    <option value="Other">Other</option>
+</select>
+
+<div for="reason">Критичность:</div>
+<select   ng-model="form.criticality">
+    <option value="" class="" selected="selected">Not selected</option>
+    <option value="Low: nice-to-have" >Low: nice-to-have</option>
+    <option value="Medium: ready to be patient, but not for too long" >Medium: ready to be patient, but not for too long</option>
+    <option value="High: blocker for work" >High: blocker for work</option>
+</select>
+
+<div for="info">Дополнительная информация:</div>
+<textarea id="info" ng-model="form.description"></textarea>
+<button class="btn btn-primary" ng-click="save(form)">Отправить</button>

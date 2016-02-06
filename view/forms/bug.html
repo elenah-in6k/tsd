@@ -1,3 +1,15 @@
-<label for="">Описание проблемы:</label>
-<input type="text" ng-model="form.description"/>
-<button ng-click="save(form)">Отправить</button>
+<div>Возникла проблема с:</div>
+<select ng-model="form.service">
+    <option value="" class="" selected="selected">Not selected</option>
+    <option value="Tahometer Ltd" label="Tahometer Ltd">Tahometer Ltd</option>
+    <option value="HR Grades" >HR Grades</option>
+    <option value="HR Portal" >HR Portal</option>
+</select>
+
+<div>Описание проблемы:</div>
+<input class="ng-valid ng-valid-maxlength" ng-minlength="1" style="width: 500px;" ng-model="form.problem" placeholder="Например: Кнопка 'Отправить' не работает на главной странице">
+
+<div for="info">Дополнительная информация:</div>
+<textarea id="info" ng-model="form.description"></textarea>
+
+<button class="btn btn-primary" ng-click="save(form)">Отправить</button>

@@ -8,12 +8,14 @@
     </head>
     <body>
         <div id="tsd-page" ng-controller="TsdController">
+            <div class="container">
             <div class="request-bar">
                 <h3> Выберите необходимую форму: </h3>
                 <request-buttons options="buttons" selected="selectedButton"></request-buttons>
             </div>
             <div class="request-form-block" ng-if="selectedButton">
-               <request-form selected-button="selectedButton" save="save" form="forms[selectedButton.type]">ffff</request-form>
+               <request-form selected-button="selectedButton" save="save" form="forms[selectedButton.type]"></request-form>
+            </div>
             </div>
         </div>
 
