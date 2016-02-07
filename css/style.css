@@ -1,22 +1,26 @@
 @import url(bootstrap/css/bootstrap.css);
-h3{
+
+h3 {
     font-size: 22px;
     font-weight: bold;
     color: #31708f;
     margin-bottom: 5px;
     margin-top: 0;
 }
-.container{
+
+.container {
     margin: 20px;
     width: 100%;
 }
+
 .request-bar {
-	display: block;
+    display: block;
     max-width: 350px;
     margin: 20px;
     width: 30%;
     float: left;
 }
+
 /* request buttons */
 .request-button {
     width: 90%;
@@ -32,19 +36,22 @@ h3{
     text-align: left;
 }
 
-.request-buttons .button-row:active{
-     color: #31708f;
-     background-color: #a4cee1;
+.request-buttons .button-row:active {
+    color: #31708f;
+    background-color: #a4cee1;
 
 }
-.request-buttons .button-row:focus{
+
+.request-buttons .button-row:focus {
     color: #31708f !important;
     background-color: #a4cee1 !important;
     border-color: #22a1c6 !important;
 }
+
 .request-buttons .button-row:hover {
     background-color: #cde1eb;
 }
+
 .request-buttons .button-row label {
     width: 90%;
     float: left;
@@ -63,7 +70,7 @@ h3{
     float: left;
     margin-left: 20px;
     margin-top: 30px;
-    border-color: #bce8f1 ;
+    border-color: #bce8f1;
     width: 70%;
 
 }
@@ -83,8 +90,8 @@ h3{
     padding: 10px 15px;
 }
 
-#request-form .form-content{
-    padding:0 35px 15px;
+#request-form .form-content {
+    padding: 0 35px 15px;
     font-size: 14px;
     border: 1px solid #bce8f1;
 }
