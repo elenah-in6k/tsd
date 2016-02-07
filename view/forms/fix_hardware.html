@@ -1,8 +1,8 @@
 <div>Оборудование которое вы хотите:</div>
-<input ng-model="form.name" type="text" placeholder="E.g.: RAM 4gb, HDD 500gb"/>
+<input name="name" ng-model="form.name" ng-minlength="3" type="text" placeholder="E.g.: RAM 4gb, HDD 500gb" required/>
 
 <div >Причина замены:</div>
-<select ng-model="form.reason">
+<select name="reason" ng-model="form.reason" required>
     <option value="" class=""  selected="selected" >Not selected</option>
     <option value="Breakdown" >Breakdown</option>
     <option value="Upgrade">Upgrade</option>
@@ -11,7 +11,7 @@
 </select>
 
 <div for="reason">Критичность:</div>
-<select   ng-model="form.criticality">
+<select name="criticality"  ng-model="form.criticality" required>
     <option value="" class="" selected="selected">Not selected</option>
     <option value="Low: nice-to-have" >Low: nice-to-have</option>
     <option value="Medium: ready to be patient, but not for too long" >Medium: ready to be patient, but not for too long</option>
@@ -20,4 +20,5 @@
 
 <div for="info">Дополнительная информация:</div>
 <textarea id="info" ng-model="form.description"></textarea>
-<button class="btn btn-primary" ng-click="save(form)">Отправить</button>
+
+<button class="btn btn-primary" ng-disabled="(request.reason.$invalid || request.name.$invalid || request.criticality.$invalid)" ng-click="save(form)" disabled="disabled" >Отправить</button>

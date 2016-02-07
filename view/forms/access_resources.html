@@ -1,17 +1,18 @@
+
 <div >Адрес ресурса:</div>
-<input ng-model="form.address" type="text" placeholder="E.g: https://jira.atlassian.com/"/>
+<input name="address"  ng-model="form.address"   ng-minlength="3" type="text" placeholder="E.g: https://jira.atlassian.com/" required/>
 
 <div >Имя проекта:</div>
 <input ng-model="form.projectName" type="text" placeholder="Введите имя проекта"/>
 
 <div>Есть ли у вас аккаунт для данного ресурса?
-    <input  type="checkbox" ng-model="form.has_account" class="ng-pristine ng-untouched ng-valid"></div>
+    <input type="checkbox" ng-model="form.has_account" class="ng-pristine ng-untouched ng-valid"></div>
 
 
 <div class="request-label" >Логин пользователя:</div>
-<input class=" ng-valid disabled-input" ng-class="!form.has_account ? 'disabled-input' : '' " ng-disabled="!form.has_account"  ng-model="form.login" disabled="disabled">
+<input name="login"  class="ng-valid"  ng-class="!form.has_account ? 'disabled-input' : '' " ng-disabled="!form.has_account"  ng-model="form.login" disabled="disabled" type="text" ng-minlength="3" required>
 
 <div for="info">Дополнительная информация:</div>
 <textarea id="info" ng-model="form.description"></textarea>
+<button  class="btn btn-primary"  ng-disabled="(request.address.$invalid && !checkbox) || (request.address.$invalid || request.login.$invalid &&  !checkbox)"  ng-click="save(form)" disabled="disabled"  >Отправить</button>
 
-<button class="btn btn-primary" ng-click="save(form)">Отправить</button>
