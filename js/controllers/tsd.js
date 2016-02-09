@@ -11,6 +11,10 @@ angular.module('tsd').controller('TsdController', function ($scope, $rootScope, 
     });
     console.log($scope.forms);
 
+    $scope.isInvalidForm = function () {
+
+    };
+
     $scope.save = function (form) {
         $cookies.putObject($scope.selectedButton.type, form);
         console.log(form);

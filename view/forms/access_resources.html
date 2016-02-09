@@ -11,12 +11,11 @@
 
 <div class="request-label">Логин пользователя:</div>
 <input name="login" class="ng-valid" ng-class="!form.hasAccount ? 'disabled-input' : '' "
-       ng-disabled="!form.hasAccount" ng-model="form.login" disabled="disabled" type="text" ng-minlength="3" required>
+       ng-disabled="!form.hasAccount" ng-model="form.login" disabled="disabled" type="text"  ng-required="form.hasAccount">
 
 <div for="info">Дополнительная информация:</div>
 <textarea id="info" ng-model="form.description"></textarea>
 <button class="btn btn-primary"
-        ng-disabled="(request.address.$invalid && !form.hasAccount) || (request.address.$invalid || request.login.$invalid &&  form.hasAccount)"
+        ng-disabled="request.$invalid"
         ng-click="save(form)" disabled="disabled">Отправить
 </button>
-

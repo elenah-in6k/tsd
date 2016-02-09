@@ -17,6 +17,6 @@
 <textarea id="info" ng-model="form.description"></textarea>
 
 <button class="btn btn-primary"
-        ng-disabled="(request.reason.$invalid || request.name.$invalid || request.criticality.$invalid)"
+        ng-disabled="request.$invalid"
         ng-click="save(form)" disabled="disabled">Отправить
 </button>
