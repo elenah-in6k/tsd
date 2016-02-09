@@ -1,9 +1,8 @@
 <div>Возникла проблема с:</div>
-<select name="service" ng-model="form.service" required>
+<select name="service" ng-model="form.service" required >
     <option value="" class="" selected="selected">Not selected</option>
-    <option value="Tahometer Ltd" label="Tahometer Ltd">Tahometer Ltd</option>
-    <option value="HR Grades">HR Grades</option>
-    <option value="HR Portal">HR Portal</option>
+    <option value="{{service}}" ng-selected="service == form.service" ng-repeat="service in services">{{service}}</option>
+
 </select>
 
 <div>Описание проблемы:</div>

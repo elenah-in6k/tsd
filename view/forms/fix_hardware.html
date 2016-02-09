@@ -4,20 +4,13 @@
 <div>Причина замены:</div>
 <select name="reason" ng-model="form.reason" required>
     <option value="" class="" selected="selected">Not selected</option>
-    <option value="Breakdown">Breakdown</option>
-    <option value="Upgrade">Upgrade</option>
-    <option value="Individual preference">Individual preference</option>
-    <option value="Other">Other</option>
+    <option value="{{reason}}" ng-selected="reason == form.reason" ng-repeat="reason in fixHardware.reasons">{{reason}}</option>
 </select>
 
 <div for="reason">Критичность:</div>
 <select name="criticality" ng-model="form.criticality" required>
     <option value="" class="" selected="selected">Not selected</option>
-    <option value="Low: nice-to-have">Low: nice-to-have</option>
-    <option value="Medium: ready to be patient, but not for too long">
-        Medium: ready to be patient, but not for too long
-    </option>
-    <option value="High: blocker for work">High: blocker for work</option>
+    <option value="{{criticality}}" ng-selected="criticality == form.criticality" ng-repeat="criticality in fixHardware.criticalityLevels">{{criticality}}</option>
 </select>
 
 <div for="info">Дополнительная информация:</div>
